@@ -39,12 +39,12 @@ public class CartController {
 	}
 	
 	@RequestMapping(value = "/save")
-	public String save(HttpServletRequest request,Model model) {
+	public String save(HttpServletRequest request,Model model,Integer user_id) {
 		String product_id = request.getParameter("product_id");
 		int product_id_ = Integer.parseInt(product_id);
 		Cart cart=cartService.findCart(product_id_);
 		if (cart == null) {
-			cartService.saveCart(product_id_);
+			cartService.saveCart(product_id_,user_id);
 		}else {			
 			cartService.addCart(product_id_);	
 		}
@@ -77,6 +77,19 @@ public class CartController {
 		// 跳转到cart页面
 		return "cart";
 	}
+		
+	@RequestMapping(value="/add")
+	public String add(Model model,HttpServletRequest request){
+		String product_id = request.getParameter("product_id");
+		int product_id_ = Integer.parseInt(product_id);
+		cartService.addCart(product_id_);
+		List<Cart> cart_list = cartService.getAll();
+		// 将图书集合添加到model当中
+		model.addAttribute("cart_list", cart_list);
+		// 跳转到cart页面
+		return "cart";
+	}
+	
 	//取消购物车的东西
 	@RequestMapping(value="/remove")
 	public String remove(Model model,HttpServletRequest request){

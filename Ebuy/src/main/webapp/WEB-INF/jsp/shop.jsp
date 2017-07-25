@@ -97,7 +97,7 @@
 						<li><a href="aj" >AJ</a></li>
 						<li><a href="lining" >李宁</a></li>
 						<li><a href="asics" >亚瑟士</a></li>
-						<li><a href="collection.action?username=${ sessionScope.user.username }" >我的收藏</a></li>
+						<li><a href="collect.action?username=${ sessionScope.user.username }" >我的收藏</a></li>
                 		<li><a href="order">我的订单</a></li>
 					</ul>
 				<script type="text/javascript" src="js/nav.js"></script>
@@ -108,7 +108,7 @@
 		<div class="header-bottom-in">
 			<div class="container">
 			<div class="header-bottom-on">
-			<p class="wel"><a href="#">欢迎光临，你可以登录或注册一个账户</a></p>
+			<p class="wel"><a href="#">欢迎光临</a></p>
 			<div class="header-can">
 				<div class="search">
 					<form>

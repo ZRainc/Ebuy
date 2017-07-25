@@ -18,19 +18,19 @@ public interface ShopMapper {
 	@Select(" select * from product")
 	List<Product> findAll();
 	
-	@Select(" select * from product where type_id=1")
+	@Select(" select * from product where category_id=1")
 	List<Product> findAll1();
 	
-	@Select(" select * from product where type_id=2")
+	@Select(" select * from product where category_id=2")
 	List<Product> findAll2();
 	
-	@Select(" select * from product where type_id=3")
+	@Select(" select * from product where category_id=3")
 	List<Product> findAll3();
 	
-	@Select(" select * from product where type_id=4")
+	@Select(" select * from product where category_id=4")
 	List<Product> findAll4();
 	
-	@Select(" select * from product where type_id=5")
+	@Select(" select * from product where category_id=5")
 	List<Product> findAll5();
 	
 	@Select(" select * from product where id=#{id}")

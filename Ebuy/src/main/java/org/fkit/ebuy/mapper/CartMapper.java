@@ -28,7 +28,7 @@ public interface CartMapper {
 	List<Cart> findAll();
 	
 	    //加入购物车
-	    @Insert("insert into cart(product_id,count) values(#{product_id},#{count})")
+	    @Insert("insert into cart(product_id,count,user_id) values(#{product_id},#{count},#{user_id})")
 		@Options(useGeneratedKeys = true, keyProperty = "id")
 		int saveCart(Cart cart);
          //通过ID寻找书

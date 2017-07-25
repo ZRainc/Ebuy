@@ -13,7 +13,7 @@ public interface CollectService {
 	
 	List<Collect> getAll();
 	Collect findCollect(int product_id);
-	Collect saveCollect(int product_id);
+	Collect saveCollect(int product_id,Integer user_id);
 	Collect removeCollect(int product_id);
 	void clearCollect();
 

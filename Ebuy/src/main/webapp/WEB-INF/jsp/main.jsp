@@ -144,8 +144,7 @@
 
 				<div class="banner-bottom">
 					<div class="banner-matter">
-						<p></p> 
-						<a href="cart" class="hvr-shutter-in-vertical ">购买</a>
+						<a href="save?product_id=${product.id}" class="btn btn-danger btn-lg " role="button">加入购物车</a>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -165,7 +164,7 @@
 								<div class="top-content">
 									<h5><a href="product">保罗乔治1代</a></h5>
 									<div class="white">
-										<a href="cart" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">加入购物车</a>
+										<a href="save?product_id=${product.id}" class="btn btn-danger btn-lg " role="button">加入购物车</a>
 										<p class="dollar"><span class="in-dollar">$</span><span>2</span><span>0</span></p>
 										<div class="clearfix"></div>
 									</div>
@@ -179,7 +178,7 @@
 								<div class="top-content">
 									<h5><a href="product">科比11代</a></h5>
 									<div class="white">
-										<a href="cart" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">加入购物车</a>
+										<a href="save?product_id=${product.id}" class="btn btn-danger btn-lg " role="button">加入购物车</a>
 										<p class="dollar"><span class="in-dollar">$</span><span>3</span><span>0</span></p>
 										<div class="clearfix"></div>
 									</div>
@@ -192,7 +191,7 @@
 								<div class="top-content">
 									<h5><a href="product">大魔王</a></h5>
 									<div class="white">
-										<a href="cart" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">加入购物车</a>
+										<a href="save?product_id=${product.id}" class="btn btn-danger btn-lg " role="button">加入购物车</a>
 										<p class="dollar"><span class="in-dollar">$</span><span>5</span><span>0</span></p>
 										<div class="clearfix"></div>
 									</div>
@@ -205,7 +204,7 @@
 								<div class="top-content">
 									<h5><a href="product">欧文2代</a></h5>
 									<div class="white">
-										<a href="cart" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">加入购物车</a>
+										<a href="save?product_id=${product.id}" class="btn btn-danger btn-lg " role="button">加入购物车</a>
 										<p class="dollar"><span class="in-dollar">$</span><span>4</span><span>5</span></p>
 										<div class="clearfix"></div>
 									</div>
@@ -270,7 +269,7 @@
 								<div class="top-content bag">
 									<h5><a href="product">韦德之道5代</a></h5>
 									<div class="white">
-										<a href="cart" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">加入购物车</a>
+										<a href="save?product_id=${product.id}" class="btn btn-danger btn-lg " role="button">加入购物车</a>
 										<p class="dollar"><span class="in-dollar">$</span><span>4</span><span>0</span></p>
 										<div class="clearfix"></div>
 									</div>
@@ -284,7 +283,7 @@
 								<div class="top-content bag">
 									<h5><a href="product">玫瑰 罗斯7代</a></h5>
 									<div class="white">
-										<a href="cart" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">加入购物车</a>
+										<a href="save?product_id=${product.id}" class="btn btn-danger btn-lg " role="button">加入购物车</a>
 										<p class="dollar"><span class="in-dollar">$</span><span>2</span><span>5</span></p>
 										<div class="clearfix"></div>
 									</div>
@@ -298,7 +297,7 @@
 								<div class="top-content bag">
 									<h5><a href="product">NMD</a></h5>
 									<div class="white">
-										<a href="cart" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">加入购物车</a>
+										<a href="save?product_id=${product.id}" class="btn btn-danger btn-lg " role="button">加入购物车</a>
 										<p class="dollar"><span class="in-dollar">$</span><span>1</span><span>0</span></p>
 										<div class="clearfix"></div>
 									</div>
@@ -312,7 +311,7 @@
 								<div class="top-content bag">
 									<h5><a href="product">哈登1代篮球鞋</a></h5>
 									<div class="white">
-										<a href="cart" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">加入购物车</a>
+										<a href="save?product_id=${product.id}" class="btn btn-danger btn-lg " role="button">加入购物车</a>
 										<p class="dollar"><span class="in-dollar">$</span><span>6</span><span>0</span></p>
 										<div class="clearfix"></div>
 									</div>

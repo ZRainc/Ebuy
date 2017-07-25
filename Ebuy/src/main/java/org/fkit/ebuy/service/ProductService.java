@@ -20,8 +20,9 @@ public interface ProductService {
 	 * */
 	
 	List<Product> getAll();
-	Product addproduct(String name,Double price,String descripts,String image,String image2 ,String image3,String image4,Integer stock, Integer type_id);
-	Product removeProduct(int id);	
+	Product addproduct(String name,Double price,String descripts,String image,String image2 ,String image3,String image4,Integer stock, Integer category_id);
+	Product removeProduct(Integer id);
+	Product updateproduct(String name,Double price,String descripts,String image,String image2 ,String image3,String image4,Integer stock, Integer category_id);
 
 
 }

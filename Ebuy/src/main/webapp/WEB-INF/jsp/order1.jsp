@@ -10,32 +10,33 @@
 </head>
 <body>
 <div class="container">
-   <h2>我的订单</h2>
+   <h2>订单</h2>
+   
    <table class="table table-hover">
-            <c:forEach items="${requestScope.order_list }" var="order">
-                <c:forEach items="${order.product }" var="product">    
+            <c:forEach items="${requestScope.order_list }" var="order">  
+             <c:forEach items="${order.product }" var="product"> 
             <tr>
 			<th class="thtd">图片</th>
 			<th class="thtd">名称</th>
 			<th class="thtd">价格</th>
-			<th class="thtd"><font color="blue">购买</font></th>
 			<th class="thtd"><font color="red">删除</font></th>
+			<th class="thtd"><font color="red">生成订单</font></th>
 		    </tr>
 	  
     
 			<tr>
-				<td><img src="image/${product.image}"></td>
+				<td><img src="images/${product.image}" height="70"></td>
 				<td>${product.name}</td>
 				<td>${product.price}</td>
-			<td>
-			<a class="btn btn-info" href="saveorder?product_id=${product.id}" role="button">立即购买</a>
+		    <td>
+			<a class="btn btn-danger" href="removeorder?product_id=${product.id}">删除</a>
 		    </td>
 		    <td>
-			<a class="btn btn-danger" href="removeorder?product_id=${product.id}" role="button">删除</a>
+			<a class="btn btn-danger" href="notice?product_id=${product.id}&use_id=${user_id}">生成订单</a>
 		    </td>
 		  </tr>
-		</c:forEach>  
-		</c:forEach>		
+		</c:forEach>  	
+		</c:forEach>	
         </table>
  </div>
 </body>

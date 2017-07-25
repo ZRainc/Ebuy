@@ -8,7 +8,7 @@ public class Collect {
     private String image;
     private String name;
     private int price;
-    private int user_id;
+    private Integer user_id;
     private int product_id;
     
     public Collect() {
@@ -28,11 +28,11 @@ public class Collect {
 		return "User [id=" + id + ", image=" + image +", name=" + name + ", product=" + product +", price=" + price +", user_id=" + user_id +", product_id= " + product_id +"]";
 	}
 
-	public int getUser_id() {
+	public Integer getUser_id() {
 		return user_id;
 	}
 
-	public void setUser_id(int user_id) {
+	public void setUser_id(Integer user_id) {
 		this.user_id = user_id;
 	}
 

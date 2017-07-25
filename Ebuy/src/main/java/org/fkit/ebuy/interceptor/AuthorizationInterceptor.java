@@ -3,7 +3,6 @@ package org.fkit.ebuy.interceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.fkit.ebuy.domain.Admin;
 import org.fkit.ebuy.domain.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class AuthorizationInterceptor  implements HandlerInterceptor {
 
 	// 不拦截"/loginForm"和"/login"请求
-	private static final String[] IGNORE_URI = {"/login","/loginForm", "/register", "/main","/findpassword","/adminlogin","/newpassword","/login1","/adminloginForm","/adminindex","/insertproduct"};
+	private static final String[] IGNORE_URI = {"/login","/loginForm", "/register", "/main","/findpassword","/adminlogin","/newpassword","/login1","/shop1","/order1","/adminloginForm","/adminindex","/insertproduct","/updateproduct"};
 	
 	 /** 
      * 该方法将在整个请求完成之后执行， 主要作用是用于清理资源的，

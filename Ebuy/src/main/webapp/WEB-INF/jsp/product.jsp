@@ -30,12 +30,10 @@
 					<a href="index.html"><img src="images/logo.png" alt=" " ></a>
 				</div>
 				<div class="header-in">
-					<div class="col-md-10  col-sm-6"  > 
-           <a href="loginForm"  >登录</a>
-					    		&nbsp;&nbsp;
-						<a  href="register"  >注册</a> 
-			</div>
-			</div>
+						<div>当前在线人数：${applicationScope.count}</div>
+						 <div>${ sessionScope.user.username }</div>
+						 <a href ="main">注销</a>
+	  					</div> 
 		</div>
 		</div>
 		</div>
@@ -145,39 +143,20 @@
         <p>价格  ${product.price}   </p>
        	<div class="row">          
          </div>  
-         <p> <div class="col-md-6">已销售： ${product.sales}  件</div> 
              <div class="col-md-6">库存：${product.stock}   件</div> 
          <br><br> 
-         <form action="newcollect">
-         <div class="col-md-9">
-         		<input type="hidden" name="id" id="id" tabindex="1" class="form-control" value="${product.id}" > 
-                <input type="hidden" name="goodsname" id="goodsname" tabindex="1" class="form-control" value="${product.name}" >
-                <input type="hidden" name="price" id="price" tabindex="1" class="form-control" value="${product.price}" >
-                <input type="hidden" name="image" id="image" tabindex="1" class="form-control" value="${product.image}" >
-                <input type="hidden" name="descripts" id="descripts" tabindex="1" class="form-control" value="${product.descripts}" >
-                <input type="hidden" name="username" id="username" tabindex="1" class="form-control" value="${ sessionScope.user.username }" >
-          </div> 
+         
+         
         <div class="row">
             <div class="col-md-5  col-md-offset-1">
-                 <p><a href="savecollect?product_id=${product.id}" class="btn btn-danger btn-lg " role="button"> 加入收藏夹</a></p>
+                 <p><a href="savecollect?product_id=${product.id}&user_id=${user.id}" class="btn btn-danger btn-lg " role="button"> 加入收藏夹</a></p>
             </div>          
          </div>
-        </form>
-         <form action="savecart">
-         <div class="col-md-9">
-         		<input type="hidden" name="id" id="id" tabindex="1" class="form-control" value="${product.id}" > 
-                <input type="hidden" name="goodsname" id="goodsname" tabindex="1" class="form-control" value="${product.name}" >
-                <input type="hidden" name="price" id="price" tabindex="1" class="form-control" value="${product.price}" >
-                <input type="hidden" name="image" id="image" tabindex="1" class="form-control" value="${product.image}" >
-                <input type="hidden" name="descripts" id="descripts" tabindex="1" class="form-control" value="${product.descripts}" >
-                <input type="hidden" name="username" id="username" tabindex="1" class="form-control" value="${ sessionScope.user.username }" >
-          </div> 
         <div class="row">
             <div class="col-md-5  col-md-offset-1">
-                  <p><a href="save?product_id=${product.id}" class="btn btn-danger btn-lg " role="button"> 加入购物车</a></p>
+                  <p><a href="save?product_id=${product.id}&user_id=${user.id}" class="btn btn-danger btn-lg " role="button"> 加入购物车</a></p>
             </div>
            </div>          
-        </form>
         </div> 
    </c:forEach>
    </div>   

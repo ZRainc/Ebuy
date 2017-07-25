@@ -26,8 +26,8 @@ public interface CollectMapper {
 		@Result(column = "product_id", property = "product_id")})
 		List<Collect> findAll();
 	
-	    //加入购物车
-	    @Insert("insert into collect(product_id) values(#{product_id})")
+	    //加入收藏夹
+	    @Insert("insert into collect(product_id,user_id) values(#{product_id},#{user_id})")
 		@Options(useGeneratedKeys = true, keyProperty = "id")
 		int saveCollect(Collect collect);
          //通过ID寻找商品

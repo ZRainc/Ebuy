@@ -5,18 +5,18 @@ import java.util.List;
 import org.fkit.ebuy.domain.Product;
 
 public class Cart {
-	private int id;
+	private Integer id;
 	private List<Product> product;
 	private int count;
 	private int product_id;
-	private int user_id;
+	private Integer user_id;
 	
 
-	public int getUser_id() {
+	public Integer getUser_id() {
 		return user_id;
 	}
 
-	public void setUser_id(int user_id) {
+	public void setUser_id(Integer user_id) {
 		this.user_id = user_id;
 	}
 
@@ -26,11 +26,11 @@ public class Cart {
 		return "Cart [id=" + id + ", product=" + product +", count=" + count + ", product_id=" + product_id + ", user_id="+ user_id + "]";
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

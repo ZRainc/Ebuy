@@ -100,7 +100,7 @@
 						<li><a href="aj" >AJ</a></li>
 						<li><a href="lining" >李宁</a></li>
 						<li><a href="asics" >亚瑟士</a></li>
-						<li><a href="collection.action?username=${ sessionScope.user.username }" >我的收藏</a></li>
+						<li><a href="collect.action?username=${ sessionScope.user.username }" >我的收藏</a></li>
                 		<li><a href="order">我的订单</a></li>
                 		<li><a href="cart.action?username=${ sessionScope.user.username }"  class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-home"></span> <strong>购物车</strong> </a>  </li>
 					</ul>

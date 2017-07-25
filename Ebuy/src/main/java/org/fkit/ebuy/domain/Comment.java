@@ -1,31 +1,25 @@
 package org.fkit.ebuy.domain;
 
 public class Comment {
-	private int pid;
-	private String username;
-	private String service;
+	private int id;
+	private int order_id;
+	private String service;//服务
 	private String logistics; //物流
-	private String quality;
+	private String quality;//质量
 	private String comments;
 	private String image1;
-	//private String image2;
+	
 	
 	 public Comment() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
 
-	public int getPid() {
-		return pid;
+	public int getId() {
+		return id;
 	}
-	public void setPid(int pid) {
-		this.pid = pid;
-	}
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getService() {
@@ -54,7 +48,7 @@ public class Comment {
 	}
 	@Override
 	public String toString() {
-		return "User [pid=" + pid + ", username=" + username + ", service="+ service + ", logistics=" + logistics + ", quality= "+ quality +",comments=" + comments + ",image1=" + image1 + "]";
+		return "User [id=" + id + ", order_id=" + order_id + ", service="+ service + ", logistics=" + logistics + ", quality= "+ quality +",comments=" + comments + ",image1=" + image1 + "]";
 	}
 //	public String getImage2() {
 //		return image2;
@@ -67,5 +61,13 @@ public class Comment {
 	}
 	public void setImage1(String image1) {
 		this.image1 = image1;
+	}
+
+	public int getOrder_id() {
+		return order_id;
+	}
+
+	public void setOrder_id(int order_id) {
+		this.order_id = order_id;
 	}
 }

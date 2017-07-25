@@ -29,16 +29,6 @@ public class CommentController {
 	/**
 	 * 处理/main请求
 	 * */
-//	@RequestMapping(value="/product.comment")
-//	 public String main(int pid,
-//			 Model model){
-//		// 获得所有图书集合
-//		List<Comment> comment_list = commentService.getAll(pid);
-//		// 将图书集合添加到model当中
-//		model.addAttribute("comment_list", comment_list);
-//		// 跳转到main页面
-//		return "product";
-//	}
 	 @RequestMapping(value="/submitcomment",method=RequestMethod.POST)
 	 public ModelAndView comment(
 						String service,
@@ -49,9 +39,10 @@ public class CommentController {
 					   ModelAndView mv,
 				     HttpSession session){
 	   Comment comment  = commentService.comment(service,logistics,quality,comments,image1);
-	     mv.setViewName("comment");
+	     mv.setViewName("order");
 			return mv;
 	
 	 }
 	
+	 
 }

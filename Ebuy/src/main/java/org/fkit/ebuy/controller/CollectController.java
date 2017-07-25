@@ -38,14 +38,14 @@ public class CollectController {
 		return "collect";
 	}
 	@RequestMapping(value = "/savecollect")
-	public String add(HttpServletRequest request,Model model) {
+	public String add(HttpServletRequest request,Model model,Integer user_id) {
 		String product_id = request.getParameter("product_id");
 		int product_id_ = Integer.parseInt(product_id);
 		Collect collect=collectService.findCollect(product_id_);
 		if (collect == null) {
-			collectService.saveCollect(product_id_);
+			collectService.saveCollect(product_id_,user_id);
 		}else {			
-			collectService.saveCollect(product_id_);	
+			return("failcollect");
 		}
 		List<Collect> collect_list = collectService.getAll();
 		// 将图书集合添加到model当中

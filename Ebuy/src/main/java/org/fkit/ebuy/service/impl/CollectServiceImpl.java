@@ -43,10 +43,11 @@ public class CollectServiceImpl implements CollectService {
 	}
 
 	@Override
-	public Collect saveCollect(int product_id) {
+	public Collect saveCollect(int product_id,Integer user_id) {
 		// TODO Auto-generated method stub
 		Collect collect = new Collect();
 		collect.setProduct_id(product_id);
+		collect.setUser_id(user_id);
 		collectMapper.saveCollect(collect);
 		return collect;
 	}

@@ -1,7 +1,7 @@
 package org.fkit.ebuy.domain;
 
 public class User {
-	//private Integer id;
+	private Integer id;
 	private String loginname;
 	private String password;
 	private String username;
@@ -48,7 +48,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [ loginname=" + loginname + ", password="
+		return "User [ id=" + id + ", loginname=" + loginname + ", password="
 				+ password + ", username=" + username + ",email=" + email + ",phonenumber=" + phonenumber +"]";
 	}
 
@@ -69,6 +69,14 @@ public class User {
 
 	public void setPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 

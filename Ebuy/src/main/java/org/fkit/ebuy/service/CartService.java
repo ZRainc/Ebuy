@@ -13,7 +13,7 @@ public interface CartService {
 	
 	List<Cart> getAll();
 	Cart findCart(int product_id);
-	Cart saveCart(int product_id);
+	Cart saveCart(int product_id,Integer user_id);
 	Cart addCart(int product_id);
 	Cart reduceCart(int product_id);
 	Cart removeCart(int product_id);

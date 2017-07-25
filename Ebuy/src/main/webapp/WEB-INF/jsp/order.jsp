@@ -60,7 +60,7 @@
 						<li><a href="aj" >AJ</a></li>
 						<li><a href="lining" >李宁</a></li>
 						<li><a href="asics" >亚瑟士</a></li>
-						<li><a href="collection.action?username=${ sessionScope.user.username }" >我的收藏</a></li>
+						<li><a href="collect.action?username=${ sessionScope.user.username }" >我的收藏</a></li>
                 		<li><a href="order">我的订单</a></li>
                 		<li><a href="cart"  class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-home"></span> <strong>购物车</strong> </a>  </li>  
 					</ul>
@@ -95,20 +95,18 @@
 			<th class="thtd">图片</th>
 			<th class="thtd">名称</th>
 			<th class="thtd">价格</th>
-			<th class="thtd"><font color="blue">购买</font></th>
-			<th class="thtd"><font color="red">删除</font></th>
+			<th class="thtd">数量</th>
+			<th class="thtd">评论</th>
 		    </tr>
 	  
     
 			<tr>
-				<td><img src="image/${product.image}"></td>
+				<td><img src="images/${product.image}" height="70"></td>
 				<td>${product.name}</td>
 				<td>${product.price}</td>
-			<td>
-			<a class="btn btn-info" href="saveorder?product_id=${product.id}" role="button">立即购买</a>
-		    </td>
-		    <td>
-			<a class="btn btn-danger" href="removeorder?product_id=${product.id}" role="button">删除</a>
+				<td>${order.count}</td>
+				<td>
+			<a class="btn btn-info" href="submitcomment?id=${product.id}" role="button">立即评论</a>
 		    </td>
 		  </tr>
 		</c:forEach>  
@@ -116,21 +114,7 @@
         </table>
  </div>
   <hr>
- <div class="container">
- 	<div class="col-md-2 col-sm-3 col-lg-2 col-xs-3">
-    
-    </div>
-    <div class="col-md-2 col-sm-3 col-lg-2 col-xs-3">
-    
-    </div>
-    
-    <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 col-md-offset-3">
-    	<h3 >总金额：<strong></strong></h3>
-    </div>
-    <div class="col-md-2 col-sm-3 col-lg-2 col-xs-3">
-    	 <button class="btn btn-danger btn-lg ">结算</button>   
-    </div>
- </div>
+
 <div class="footer">
 			<div class="footer-top">
 				<div class="container">

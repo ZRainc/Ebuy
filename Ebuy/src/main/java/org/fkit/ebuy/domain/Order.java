@@ -3,12 +3,12 @@ package org.fkit.ebuy.domain;
 import java.util.List;
 
 public class Order {
-	private int id;
+	private Integer id;
 	private List<Product> product;
 	private int count;
 	private int totalprice;
 	private int user_id;
-	private int product_id;
+	private Integer product_id;
 	
 	
 	public int getTotalprice() {
@@ -31,18 +31,18 @@ public class Order {
 		this.user_id = user_id;
 	}
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	
 	
-	public int getProduct_id() {
+	public Integer getProduct_id() {
 		return product_id;
 	}
-	public void setProduct_id(int product_id) {
+	public void setProduct_id(Integer product_id) {
 		this.product_id = product_id;
 	}
 	@Override

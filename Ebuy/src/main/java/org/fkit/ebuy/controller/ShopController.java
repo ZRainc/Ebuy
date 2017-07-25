@@ -35,6 +35,15 @@ public class ShopController {
 		// 跳转到main页面
 		return "shop";
 	}
+	@RequestMapping(value="/shop1")
+	 public String shop1(Model model){
+		// 获得所有图书集合
+		List<Product> product_list = shopService.getAll();
+		// 将图书集合添加到model当中
+		model.addAttribute("product_list", product_list);
+		// 跳转到main页面
+		return "shop1";
+	}
 	@RequestMapping(value="/lining")
 	 public String canvasbag(Model model){
 		// 获得所有图书集合

@@ -35,18 +35,23 @@ public class ProductServiceImpl implements ProductService{
 	}
 	
 	@Override
-	public Product addproduct(String name, Double price, String descripts, String image, String image2, String image3, String image4, Integer stock, Integer type_id) {
+	public Product addproduct(String name, Double price, String descripts, String image, String image2, String image3, String image4, Integer stock, Integer category_id) {
 		// TODO Auto-generated method stub
-		return productMapper.addproduct(name, price, descripts, image,image2,image3,image4,stock,type_id);
+		return productMapper.addproduct(name, price, descripts, image,image2,image3,image4,stock,category_id);
 	}
 	
 	@Override
-	public Product removeProduct(int id) {
+	public Product removeProduct(Integer id) {
 		// TODO Auto-generated method stub
 		Product product = productMapper.findWithId(id);
 		productMapper.removeProduct(product);
 		return product;
 	}
 	
+	@Override
+	public Product updateproduct(String name, Double price, String descripts, String image, String image2, String image3, String image4, Integer stock, Integer category_id) {
+		// TODO Auto-generated method stub
+		return productMapper.updateproduct(name, price, descripts, image,image2,image3,image4,stock,category_id);
+	}
 
 }

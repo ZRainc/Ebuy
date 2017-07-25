@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -6,72 +5,179 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"> 
-	<title>评论</title>
-	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>购物车</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<script type="text/javascript" src="js/move-top.js"></script>
 </head>
 <body>
-  <div class="container">
-  <div class="row"> 
-        <div class="col-md-10  col-sm-6"  > 
-           <a>易购欢迎你</a>
-        </div>
-        <div class="col-md-1 col-sm-3">
-             <a href="register"> 注册</a> 
-        </div> 
-        <div class="col-md-1 col-sm-3">
-             <a href="loginForm"> 登录</a> 
-        </div>
-   </div>              
-       
-        
-   </div> 
-   <hr>
- <div class="container">
-  　<div class="col-md-1">
-  　   <img src="images/图标.png" class="img-responsive" alt="">
-  　</div>
-   <div class="col-md-9">
-      	<div class="navbar navbar-default " role="navigation">
-             <ul class="nav nav-pills  nav-justified">
-                <li ><a href="main">网站首页</a></li>
-                <li><a href="shop">精选商城</a></li>
-                <li><a href="collection">我的收藏</a></li>
-                <li><a href="order">我的订单</a></li>
-             </ul>
-    	 </div>
-   </div>
-   <div class= "col-md-2">
-     	 <p><a href="cart.action?username=${ sessionScope.user.username }" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-home"></span> <strong>购物车</strong> </a>  </p>     
-    </div>
-   </div>
+  <!--header-->
+	<div class="header">
+		<div class="header-top">
+			<div class="container">	
+			<div class="header-top-in">			
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=" " ></a>
+				</div>
+				<div class="header-in">
+						<div>当前在线人数：${applicationScope.count}</div>
+						 <div>${ sessionScope.user.username }</div>
+						 <a href ="main">注销</a>
+	  					</div>  
+		</div>
+		</div>
+		</div>
+		<div class="header-bottom">
+		<div class="container">
+			<div class="h_menu4">
+				<a class="toggleMenu" href="#">Menu</a>
+				<ul class="nav">
+					<li class="active"><a href="main"><i> </i>首页</a></li>
+					<li ><a href="shop" >所有分类</a>
+						<ul class="drop">
+						<li><a href="adidas" >阿迪达斯</a></li>            
+						<li><a href="nike" >耐克</a></li>						  				 
+						<li><a href="aj" >AJ</a></li>
+						<li><a href="lining" >李宁</a></li>
+						<li><a href="asics" >亚瑟士</a></li>
+						</ul>
+						</li> 
+												
+						<li><a href="adidas" >阿迪达斯</a></li>            
+						<li><a href="nike" >耐克</a></li>						  				 
+						<li><a href="aj" >AJ</a></li>
+						<li><a href="lining" >李宁</a></li>
+						<li><a href="asics" >亚瑟士</a></li>
+						<li><a href="collect">我的收藏</a></li>
+                		<li><a href="order">我的订单</a></li>
+                		<li><a href="cart"  class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-home"></span> <strong>购物车</strong> </a>  </li>  
+					</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+			</div>
+		</div>
+		</div>
+		<div class="header-bottom-in">
+			<div class="container">
+			<div class="header-bottom-on">
+			<p class="wel"><a href="#">欢迎光临</a></p>
+			<div class="header-can">
+				<div class="search">
+					<form>
+						<input type="text" value="Search" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}" >
+						<input type="submit" value="">
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</div>
+		</div>
+	</div>
   <hr>
  <form class="form-horizontal" action="submitcomment" method="post" >
  
- <div class="input-group input-group-lg">
-     	<input name="pid" id="pid" type="hidden" value=""/>
-     	${session.getAttribute(user).username}
-     </div>
-  <div class="form-group">
-     <ul>
-                <li>商品质量:   <a class="text-danger"><input type="text" id ="quality" name ="quality" class="form-control" >分 </a></li>
-            	<li>卖家服务:   <a class="text-danger"><input type="text" id ="service" name="quality" class="form-control" >分 </a> </li>
-                <li>物流服务:   <a class="text-danger"><input type="text" id ="logistics" name ="quality" class="form-control" >分 </a></li>
-     </ul>
-   </div>
-   <div class="input-group input-group-lg">
+  <div class="available" align="center">
+								<ul>
+									<li><input id="logistics" name="logistics">物流:
+										<select>
+										<option>1分</option>
+										<option>2分</option>
+										<option>3分</option>
+										<option>4分</option>
+										<option>5分</option>
+									</select></li>
+								<li><input id="quality" name="quality">质量:
+									<select>
+										<option>1分</option>
+										<option>2分</option>
+										<option>3分</option>
+										<option>4分</option>
+										<option>5分</option>
+								</select></li>
+								<li><input id="service" name="service">服务:
+									<select>
+									<option>1分</option>
+									<option>2分</option>
+									<option>3分</option>
+									<option>4分</option>
+									<option>5分</option>
+								</select></li>
+							</ul>
+						</div>
+	<div class="container" align="center">
+   <div class="input-group" align="center">
      	<input type="text" id="comments" name="comments" class="form-control"  style="width:600px;height:270px;">
      </div>
-     <div class="input-group input-group-lg">
+     <div class="input-group" align="center">
     		 <label for="inputfile">添加图片</label>
-	    	 <input type="file" id="image1" name="image1" class="form-control" >
+	    	 <input  type="file" id="image1" name="image1" class="form-control" >
 	  </div>
-	  <div class="input-group input-group-lg">
+	  <div class="input-group input-group-lg" align="center">
 			<input type="submit" value="发表评论">
 	</div>
+	</div>
 </form>
+<div class="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="footer-top-in">
+						<h6>关于我们</h6>
+						<p>我们是一个专门销售各种鞋的网站</p>
+					</div>
+					<div class="footer-top-in">
+						<h6>信息</h6>
+						<ul>
+							<li><a href="#">关于我们</a></li>
+							<li><a href="#">配送信息</a></li>
+							<li><a href="#">隐私政策</a></li>
+							<li><a href="#">条款和条件</a></li>
+						</ul>
+					</div>
+					<div class="footer-top-in">
+						<h6>客服服务</h6>
+						<ul>
+							<li><a href="contact.html">联系我们</a></li>
+							<li><a href="#">返回</a></li>
+							<li><a href="#">网站地图</a></li>
+						</ul>
+					</div>
+					<div class="footer-top-in">
+						<h6>我的账户</h6>
+						<ul>
+							<li><a href="account.html">我的账户</a></li>
+							<li><a href="#">订单历史</a></li>
+							<li><a href="wishlist.html">愿望清单</a></li>
+							<li><a href="#">通讯</a></li>
+						</ul>
+					</div>
+					<div class="footer-top-in">
+						<h6>附加功能</h6>
+						<ul>
+							<li><a href="#">品牌</a></li>
+							<li><a href="#">礼券</a></li>
+							<li><a href="#">关联公司</a></li>
+							<li><a href="#">特价</a></li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<p class="footer-class">Copyright@毒物</p>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
+		</div>
 </body>
 </html>

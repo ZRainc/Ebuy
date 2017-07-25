@@ -21,13 +21,13 @@
 									
 								]
 						},{"menuid":"8","icon":"icon-sys","menuname":"商品管理",
-							"menus":[{"menuname":"商品下架","icon":"icon-nav","url":"deleteproduct"},
+							"menus":[{"menuname":"商品下架","icon":"icon-nav","url":"shop1"},
 							         {"menuname":"添加商品","icon":"icon-nav","url":"insertproduct"},
 									{"menuname":"商品分类","icon":"icon-nav","url":"demo1"}
 								]
 						},{"menuid":"56","icon":"icon-sys","menuname":"订单管理",
-							"menus":[{"menuname":"订单列表","icon":"icon-nav","url":"listorder"},
-									{"menuname":"订单处理","icon":"icon-nav","url":"order"}
+							"menus":[{"menuname":"订单列表","icon":"icon-nav","url":"order1"},
+									{"menuname":"订单处理","icon":"icon-nav","url":"order1"}
 								]
 						},{"menuid":"28","icon":"icon-sys","menuname":"库存管理",
 							"menus":[{"menuname":"库存管理","icon":"icon-nav","url":"stockmanagement"}

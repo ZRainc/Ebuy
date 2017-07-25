@@ -1,38 +1,28 @@
 package org.fkit.ebuy.domain;
 
+import java.util.List;
+
 public class Product {
-     private int id;
+     private Integer id;
      private String name;
      private String price;
      private String descripts;
      private String image;
-     private String image1;
      private String image2;
      private String image3;
      private String image4;
-     private int stock; //库存
-     private int sales;  //销量
-     private int typeid;
-     int count;
+     private Integer stock; 
+     Integer category_id;
+     private List<Product> product;
+//     int count;
 
-	public int getStock() {
+	public Integer getStock() {
 		return stock;
 	}
-	public void setStock(int stock) {
+	public void setStock(Integer stock) {
 		this.stock = stock;
 	}
-	public int getSales() {
-		return sales;
-	}
-	public void setSales(int sales) {
-		this.sales = sales;
-	}
-	public String getImage1() {
-		return image1;
-	}
-	public void setImage1(String image1) {
-		this.image1 = image1;
-	}
+	
 	public String getImage2() {
 		return image2;
 	}
@@ -52,10 +42,10 @@ public class Product {
 		this.image4 = image4;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -85,19 +75,28 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", price="+ price + ", image=" + image + ", image2= "+ image2 +",image3=" + image3 + ",image4=" + image4 + ",descripts=" + descripts + ",stock=" + stock +", sales=" + sales +",typeid="+typeid+",count=" + count + "]";
+		return "User [id=" + id + ", name=" + name + ", price="+ price + ", image=" + image + ", image2= "+ image2 +",image3=" + image3 + ",image4=" + image4 + ",descripts=" + descripts + ",product=" + product + ",stock=" + stock +", category_id=" + category_id + "]";
 	}
-	public int getTypeid() {
-		return typeid;
+	
+//	public int getCount() {
+//		return count;
+//	}
+//	public void setCount(int count) {
+//		this.count = count;
+//	}
+	
+	public int getCategory_id() {
+		return category_id;
 	}
-	public void setTypeid(int typeid) {
-		this.typeid = typeid;
+
+	public void setCategory_id(int category_id) {
+		this.category_id = category_id;
 	}
-	public int getCount() {
-		return count;
+	public List<Product> getProduct() {
+		return product;
 	}
-	public void setCount(int count) {
-		this.count = count;
+	public void setProduct(List<Product> product) {
+		this.product = product;
 	}
      
 }

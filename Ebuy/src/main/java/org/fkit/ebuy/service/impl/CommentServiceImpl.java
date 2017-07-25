@@ -29,12 +29,7 @@ public class CommentServiceImpl implements CommentService {
 	 * BookService接口getAll方法实现
 	 * @see { BookService }
 	 * */
-//	@Transactional(readOnly=true)
-//	@Override
-//	public List<Comment> getAll(int pid) {
-//		
-//		return commentMapper.findAll(pid);
-//	}
+
 	@Override
 	public Comment comment(String service, String logistics, String quality, String comments, String image1) {
 		// TODO Auto-generated method stub

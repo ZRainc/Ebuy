@@ -61,7 +61,7 @@
 						<li><a href="aj" >AJ</a></li>
 						<li><a href="lining" >李宁</a></li>
 						<li><a href="asics" >亚瑟士</a></li>
-						<li><a href="collect.action?username=${ sessionScope.user.username }" >我的收藏</a></li>
+						<li><a href="collect">我的收藏</a></li>
                 		<li><a href="order">我的订单</a></li>
                 		<li><a href="cart.action?username=${ sessionScope.user.username }"  class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-home"></span> <strong>购物车</strong> </a>  </li>
 					</ul>
@@ -72,7 +72,7 @@
 		<div class="header-bottom-in">
 			<div class="container">
 			<div class="header-bottom-on">
-			<p class="wel"><a href="#">欢迎光临，你可以登录或注册一个账户</a></p>
+			<p class="wel"><a href="#">欢迎光临</a></p>
 			<div class="header-can">
 				<div class="search">
 					<form>
@@ -99,15 +99,15 @@
 			<th class="thtd">名称</th>
 			<th class="thtd">价格</th>
 			<th class="thtd"><font color="blue">购买</font></th>
-			<th class="thtd"><font color="red">删除</font></th>
+			<th class="thtd"><font color="red">从收藏夹删除</font></th>
 		    </tr>
 	  
            
-				<td><img src="image/${product.image}"></td>
+				<td><img src="images/${product.image}" height="70"></td>
 				<td>${product.name}</td>
 				<td>${product.price}</td>
 			<td>
-			<a class="btn btn-info" href="saveorder?product_id=${product.id}" role="button">立即购买</a>
+			<a class="btn btn-info" href="save?product_id=${product.id}&user_id=${user.id}" role="button">加入购物车</a>
 		    </td>
 		    <td>
 			<a class="btn btn-danger" href="removecollect?product_id=${product.id}" role="button">删除</a>

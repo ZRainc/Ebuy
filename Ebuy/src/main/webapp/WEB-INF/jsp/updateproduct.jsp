@@ -37,7 +37,7 @@
 <h3>请填写商品信息</h3>
 <div class="ts">
 	
-<form  action="addproduct" method="post">
+<form  action="updateproduct" method="post">
 	<font color="red">${requestScope.message}</font>
 	<div class="input-group ipt">
   		<span class="input-group-addon" id="basic-addon1">名称</span>

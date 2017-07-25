@@ -40,10 +40,11 @@ public class CartServiceImpl implements CartService {
 	}
 
 	@Override
-	public Cart saveCart(int product_id) {
+	public Cart saveCart(int product_id,Integer user_id) {
 		// TODO Auto-generated method stub
 		Cart cart = new Cart();
 		cart.setProduct_id(product_id);
+		cart.setUser_id(user_id);
 		final int i = 1;
 		cart.setCount(i);
 		cartMapper.saveCart(cart);
