@@ -16,7 +16,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--fonts-->
 <link href='https://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <!--//fonts-->
@@ -97,20 +96,15 @@
 			<th class="thtd">名称</th>
 			<th class="thtd">价格</th>
 			<th class="thtd">数量</th>
-			<th class="thtd"><font color="blue">购买</font></th>
-			<th class="thtd"><font color="black">增加数量</font></th>
-			<th class="thtd"><font color="black">减少数量</font></th>
-			<th class="thtd"><font color="red">删除</font></th>
+			<th class="thtd">增加数量</th>
+			<th class="thtd">减少数量</th>
+			<th class="thtd">删除</th>
+			<th class="thtd">购买</th>
 		    </tr>
-	  
-           
 				<td><img src="images/${product.image}" height="70"></td>
 				<td>${product.name}</td>
 				<td>${product.price}</td>
 				<td>${cart.count}</td>
-			<td>
-			<a class="btn btn-info" href="saveorder?product_id=${product.id}&user_id=${user.id}" role="button">立即购买</a>
-		    </td>
 		    <td>
 			<a class="btn btn-warning" href="add?product_id=${product.id}" role="button">增加数量</a>
 		    </td>
@@ -118,7 +112,10 @@
 			<a class="btn btn-warning" href="reduce?product_id=${product.id}" role="button">减少数量</a>
 		    </td>
 		    <td>
-			<a class="btn btn-danger" href="remove?product_id=${product.id}" role="button">删除</a>
+			<a class="btn btn-warning" href="remove?product_id=${product.id}" role="button">删除</a>
+		    </td>
+		    <td>
+			<a class="btn btn-info" href="saveorder?product_id=${product.id}&user_id=${user.id}" role="button">立即购买</a>
 		    </td>
 		          </c:forEach>  
 	
@@ -134,13 +131,6 @@
     </div>
     <div class="col-md-2 col-sm-3 col-lg-2 col-xs-3">
     	<a class="btn btn-danger" href="clear" role="button">清空购物车</a>
-    </div>
-    
-    <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 col-md-offset-3">
-    	<h3 >总金额：<strong></strong></h3>
-    </div>
-    <div class="col-md-2 col-sm-3 col-lg-2 col-xs-3">
-    	 <button class="btn btn-danger btn-lg ">结算</button>   
     </div>
  </div>
 <div class="footer">

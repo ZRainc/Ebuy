@@ -21,17 +21,7 @@
 
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="js/bootstrap3.3.5.min.js"></script>
-	<script> 
-	$('#myModal').on('shown.bs.modal', function () {
-	 			 $('#myInput').focus()
-	});
-			$('#myModal2').on('shown.bs.modal', function () {
-	 			 $('#myInput').focus()
-	});
-		$('#myModal3').on('shown.bs.modal', function () {
-	 			 $('#myInput').focus()
-	})
-	</script>
+
 </head>
 <body>
 <h3>请填写商品信息</h3>

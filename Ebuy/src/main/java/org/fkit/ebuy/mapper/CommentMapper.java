@@ -18,8 +18,8 @@ public interface CommentMapper {
 	 * */
 
 	
-	@Select("insert into comment(service,logistics,quality,comments,image1) values(#{service},#{logistics},#{quality},#{comments},#{image1})")
-	Comment insertcomment(@Param("service")String service,@Param("logistics")String logistics,@Param("quality")String quality,
+	@Select("insert into comment(order_id,service,logistics,quality,comments,image1) values(#{order_id},#{service},#{logistics},#{quality},#{comments},#{image1})")
+	Comment insertcomment(@Param("order_id")Integer order_id,@Param("service")String service,@Param("logistics")String logistics,@Param("quality")String quality,
 			@Param("comments")String comments,@Param("image1")String image1);
 	
 }

@@ -31,9 +31,9 @@ public class CommentServiceImpl implements CommentService {
 	 * */
 
 	@Override
-	public Comment comment(String service, String logistics, String quality, String comments, String image1) {
+	public Comment comment(Integer order_id, String service, String logistics, String quality, String comments, String image1) {
 		// TODO Auto-generated method stub
-		return commentMapper.insertcomment(service,logistics,quality,comments,image1);
+		return commentMapper.insertcomment(order_id,service,logistics,quality,comments,image1);
 	}
 
 }

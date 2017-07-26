@@ -16,7 +16,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--fonts-->
 <link href='https://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <!--//fonts-->
@@ -106,7 +105,7 @@
 				<td>${product.price}</td>
 				<td>${order.count}</td>
 				<td>
-			<a class="btn btn-info" href="submitcomment?id=${product.id}" role="button">立即评论</a>
+			<a class="btn btn-info" href="comment?order_id=${order.id}" role="button">立即评论</a>
 		    </td>
 		  </tr>
 		</c:forEach>  

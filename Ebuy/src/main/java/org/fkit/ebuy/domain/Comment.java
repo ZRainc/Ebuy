@@ -2,7 +2,7 @@ package org.fkit.ebuy.domain;
 
 public class Comment {
 	private int id;
-	private int order_id;
+	private Integer order_id;
 	private String service;//服务
 	private String logistics; //物流
 	private String quality;//质量
@@ -63,11 +63,11 @@ public class Comment {
 		this.image1 = image1;
 	}
 
-	public int getOrder_id() {
+	public Integer getOrder_id() {
 		return order_id;
 	}
 
-	public void setOrder_id(int order_id) {
+	public void setOrder_id(Integer order_id) {
 		this.order_id = order_id;
 	}
 }

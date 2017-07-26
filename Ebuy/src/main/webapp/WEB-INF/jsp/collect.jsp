@@ -16,7 +16,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--fonts-->
 <link href='https://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <!--//fonts-->
@@ -98,8 +97,8 @@
 			<th class="thtd">图片</th>
 			<th class="thtd">名称</th>
 			<th class="thtd">价格</th>
-			<th class="thtd"><font color="blue">购买</font></th>
-			<th class="thtd"><font color="red">从收藏夹删除</font></th>
+			<th class="thtd">购买</th>
+			<th class="thtd">删除</th>
 		    </tr>
 	  
            
@@ -166,13 +165,6 @@
 				</div>
 			</div>
 			<p class="footer-class">Copyright@毒物</p>
-			<script type="text/javascript">
-						$(document).ready(function() {
-							
-							$().UItoTop({ easingType: 'easeOutQuart' });
-							
-						});
-					</script>
 				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 		</div>

@@ -31,6 +31,7 @@ public class CommentController {
 	 * */
 	 @RequestMapping(value="/submitcomment",method=RequestMethod.POST)
 	 public ModelAndView comment(
+			 			Integer order_id,
 						String service,
 						String logistics, 
 						String quality, 
@@ -38,7 +39,7 @@ public class CommentController {
 						String image1,
 					   ModelAndView mv,
 				     HttpSession session){
-	   Comment comment  = commentService.comment(service,logistics,quality,comments,image1);
+	   Comment comment  = commentService.comment(order_id,service,logistics,quality,comments,image1);
 	     mv.setViewName("order");
 			return mv;
 	

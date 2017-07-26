@@ -17,6 +17,6 @@ public interface CommentService {
 
 	
 
-	Comment comment(String service, String logistics, String quality, String comments, String image1);
+	Comment comment(Integer order_id,String service, String logistics, String quality, String comments, String image1);
 
 }

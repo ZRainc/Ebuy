@@ -16,7 +16,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--fonts-->
 <link href='https://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <!--//fonts-->
@@ -160,46 +159,6 @@
         </div> 
    </c:forEach>
    </div>   
- <hr>
- <div class="container">
- <form action="product.comment" method="post">
- <c:forEach items="${requestScope.comment_list }" var="c">
-  <div class="row">
-            <h1 class="text-left">商品评论</h1>
-    </div>
-   <div class="row">
-   		<div class="col-md-2">
-           <p>用户名 ${c.username}</p>
-        </div>
-        <div class="col-md-10">
-        <div class="row">
-         	<ul>
-            	<li>商品质量:   <a class="text-danger">${c.quality}分 </a></li>
-            	<li>卖家服务:   <a class="text-danger">${c.service}分 </a> </li>
-                <li>物流服务:   <a class="text-danger">${c.logistics}分 </a></li>
-            </ul> 
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <p>${c.comments}</p>
-            </div>
-            <div class="row">
-            <div class="col-md-2 col-md-offset-2">
-             <img src="1.jpg" class="img-responsive">
-            </div>
-            <div class="col-md-2">
-             <img src="1.jpg" class="img-responsive">
-            </div>
-            </div>
-        </div>
-             
-        </div>
-   </div>
-   </c:forEach>
-   
-   </form>
-</div>
-
 <div class="footer">
 			<div class="footer-top">
 				<div class="container">

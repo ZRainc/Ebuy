@@ -16,7 +16,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--fonts-->
 <link href='https://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <!--//fonts-->
@@ -88,10 +87,13 @@
 	</div>
   <hr>
  <form class="form-horizontal" action="submitcomment" method="post" >
- 
+ <div class="input-group input-group-lg">
+     	<input name="order_id" id="order_id"  value=""/>
+
+     </div>
   <div class="available" align="center">
 								<ul>
-									<li><input id="logistics" name="logistics">物流:
+									<li><p id="logistics" name="logistics">物流:</p>
 										<select>
 										<option>1分</option>
 										<option>2分</option>
@@ -99,7 +101,7 @@
 										<option>4分</option>
 										<option>5分</option>
 									</select></li>
-								<li><input id="quality" name="quality">质量:
+								<li><p id="quality" name="quality">质量:</p>
 									<select>
 										<option>1分</option>
 										<option>2分</option>
@@ -107,7 +109,7 @@
 										<option>4分</option>
 										<option>5分</option>
 								</select></li>
-								<li><input id="service" name="service">服务:
+								<li><p id="service" name="service">服务:</p>
 									<select>
 									<option>1分</option>
 									<option>2分</option>
